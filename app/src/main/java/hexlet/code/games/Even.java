@@ -11,8 +11,10 @@ public class Even {
                 System.out.println("Hello, " + name + "!\n" + "Answer 'yes' if number even otherwise answer 'no'.");
                 var currentNumber = 0;
                 var allAnswersIsCorrect = true;
-                for (var i = 0; i < 3; i++) {
-                    currentNumber = (int) (Math.random() * Math.random() * 100);
+                final int numberOfIterations = 3;
+                final int coefficient = 100;
+                for (var i = 0; i < numberOfIterations; i++) {
+                    currentNumber = (int) (Math.random() * Math.random() * coefficient);
                     System.out.println("Question: " + currentNumber);
                     String currentAnswer = ansver.nextLine();
                     if (currentNumber % 2 == 0 && currentAnswer.equals("yes")) {
@@ -24,7 +26,7 @@ public class Even {
                         break;
                     }
                 }
-                if (allAnswersIsCorrect == true) {
+                if (allAnswersIsCorrect) {
                     System.out.println("Congratulations, " + name + "!");
                 } else {
                     System.out.println("It's not correct((\n" + "Game over.");
