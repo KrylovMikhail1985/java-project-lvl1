@@ -7,7 +7,7 @@ import hexlet.code.cli.Cli;
 
 public class Calc {
     public static int question() {
-        final int min = 0;
+        final int min = 1;
         final int max = 50;
         var numberOne = RendomInteger.get(min, max);
         var operator = RendomOperator.get();
@@ -34,12 +34,10 @@ public class Calc {
         System.out.println("What is the result of the expression?");
         var allAnsversIsCorrect = true;
         final int numberOfIterations = 3;
-        var question = 0;
         var rightAnsver = "rightAnsver";
         for (var i = 0; i < numberOfIterations; i++) {
-            question = Calc.question();
-            rightAnsver = Calc.rightAnsver(question);
-            if (!Engine.ansverIsCorrect(question, rightAnsver)) {
+            rightAnsver = Calc.rightAnsver(Calc.question());
+            if (!Engine.ansverIsCorrect(rightAnsver)) {
                 allAnsversIsCorrect = false;
                 break;
             }

@@ -3,7 +3,7 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
-    public static boolean ansverIsCorrect(int question, String rightAnsver) {
+    public static boolean ansverIsCorrect(String rightAnsver) {
         var ansvers = new Scanner(System.in);
         var ansver = ansvers.nextLine();
         System.out.println("Your answer: " + ansver);

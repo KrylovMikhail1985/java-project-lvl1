@@ -6,7 +6,7 @@ import hexlet.code.cli.Cli;
 
 public class Even {
     public static int question() {
-        final int min = 0;
+        final int min = 1;
         final int max = 50;
         var number = RendomInteger.get(min, max);
         System.out.println("Question: " + number);
@@ -24,12 +24,10 @@ public class Even {
         System.out.println("Answer 'yes' if number even otherwise answer 'no'.");
         var allAnsversIsCorrect = true;
         final int numberOfIterations = 3;
-        var question = 0;
         var rightAnsver = "rightAnsver";
         for (var i = 0; i < numberOfIterations; i++) {
-            question = Even.question();
-            rightAnsver = Even.rightAnsver(question);
-            if (!Engine.ansverIsCorrect(question, rightAnsver)) {
+            rightAnsver = Even.rightAnsver(Even.question());
+            if (!Engine.ansverIsCorrect(rightAnsver)) {
                 allAnsversIsCorrect = false;
                 break;
             }
