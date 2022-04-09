@@ -6,13 +6,16 @@ import hexlet.code.cli.Cli;
 
 public class Prime {
     public static int question() {
-        final int min = 2;
+        final int min = 0;
         final int max = 50;
         var number = RendomInteger.get(min, max);
         System.out.println("Question: " + number);
         return number;
     }
     public static String rightAnsver(int number) {
+        if (number == 0 || number == 1) {
+            return "no";
+        }
         for (var i = number - 1; i > 1; i--) {
             if (number % i == 0) {
                 return "no";
