@@ -7,7 +7,7 @@ import hexlet.code.cli.Cli;
 public class Prime {
     public static int question() {
         final int min = 0;
-        final int max = 50;
+        final int max = 200;
         var number = RendomInteger.get(min, max);
         System.out.println("Question: " + number);
         return number;
