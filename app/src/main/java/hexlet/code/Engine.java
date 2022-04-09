@@ -5,6 +5,7 @@ import java.util.Scanner;
 import hexlet.code.games.Calc;
 import hexlet.code.games.Even;
 import hexlet.code.games.Gcd;
+import hexlet.code.games.Prime;
 import hexlet.code.games.Progression;
 
 public class Engine {
@@ -21,8 +22,10 @@ public class Engine {
                 rightAnsver = Gcd.rightAnsver(Gcd.question());
             } else if (gameName.equals("Progression")) {
                 rightAnsver = Progression.rightAnsver(Progression.question());
+            } else if (gameName.equals("Prime")) {
+                rightAnsver = Prime.rightAnsver(Prime.question());
             } else {
-                System.out.println("Что-то не работает???");
+                System.out.println("goodbye!");
             }
             var ansvers = new Scanner(System.in);
             var ansver = ansvers.nextLine();
