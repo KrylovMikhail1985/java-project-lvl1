@@ -36,17 +36,7 @@ public class Gcd {
     public static void game() {
         var name = Cli.greeting();
         System.out.println("Find the greatest common divisor of given numbers.");
-        var allAnsversIsCorrect = true;
-        final int numberOfIterations = 3;
-        var rightAnsver = "rightAnsver";
-        for (var i = 0; i < numberOfIterations; i++) {
-            rightAnsver = Gcd.rightAnsver(Gcd.question());
-            if (!Engine.ansverIsCorrect(rightAnsver)) {
-                allAnsversIsCorrect = false;
-                break;
-            }
-        }
-        if (allAnsversIsCorrect) {
+        if (Engine.ansverIsCorrect("GCD")) {
             System.out.println("Congratulations, " + name + "!");
         } else {
             System.out.println("Let's try again, " + name + "!");

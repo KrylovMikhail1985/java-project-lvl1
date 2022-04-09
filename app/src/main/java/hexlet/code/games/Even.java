@@ -22,17 +22,7 @@ public class Even {
     public static void game() {
         var name = Cli.greeting();
         System.out.println("Answer 'yes' if number even otherwise answer 'no'.");
-        var allAnsversIsCorrect = true;
-        final int numberOfIterations = 3;
-        var rightAnsver = "rightAnsver";
-        for (var i = 0; i < numberOfIterations; i++) {
-            rightAnsver = Even.rightAnsver(Even.question());
-            if (!Engine.ansverIsCorrect(rightAnsver)) {
-                allAnsversIsCorrect = false;
-                break;
-            }
-        }
-        if (allAnsversIsCorrect) {
+        if (Engine.ansverIsCorrect("Even")) {
             System.out.println("Congratulations, " + name + "!");
         } else {
             System.out.println("Let's try again, " + name + "!");

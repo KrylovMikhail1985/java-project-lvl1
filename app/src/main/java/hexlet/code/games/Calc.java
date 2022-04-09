@@ -32,17 +32,7 @@ public class Calc {
     public static void game() {
         var name = Cli.greeting();
         System.out.println("What is the result of the expression?");
-        var allAnsversIsCorrect = true;
-        final int numberOfIterations = 3;
-        var rightAnsver = "rightAnsver";
-        for (var i = 0; i < numberOfIterations; i++) {
-            rightAnsver = Calc.rightAnsver(Calc.question());
-            if (!Engine.ansverIsCorrect(rightAnsver)) {
-                allAnsversIsCorrect = false;
-                break;
-            }
-        }
-        if (allAnsversIsCorrect) {
+        if (Engine.ansverIsCorrect("Calc")) {
             System.out.println("Congratulations, " + name + "!");
         } else {
             System.out.println("Let's try again, " + name + "!");

@@ -4,5 +4,7 @@
 [![Build](https://github.com/KrylovMikhail1985/java-project-lvl1/actions/workflows/CI.yml/badge.svg)](https://github.com/KrylovMikhail1985/java-project-lvl1/actions/workflows/CI.yml)
 
 https://asciinema.org/a/ppDBfcPnLQX48yvryDtk5kgYD
+
 https://asciinema.org/a/UZpAhsyjcZ2aabCpcyiqYBxpg
 https://asciinema.org/a/wlJlxNG7rdv1jup4KZjhXMOrq
+https://asciinema.org/a/LAyEU34g897J1982JZX4eGR2k
