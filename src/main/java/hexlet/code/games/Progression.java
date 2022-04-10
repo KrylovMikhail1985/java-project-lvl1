@@ -1,7 +1,5 @@
 package hexlet.code.games;
 
-import java.util.Arrays;
-
 import hexlet.code.Engine;
 import hexlet.code.RendomInteger;
 
@@ -20,13 +18,13 @@ public class Progression implements Games {
         for (var i = 1; i < array.length; i++) {
             array[i] = array[i - 1] + plusNumber;
         }
-        var textArray = new String[countOfNumbers];
+        var tA = new String[countOfNumbers];
         for (var i = 0; i < array.length; i++) {
-            textArray[i] = Integer.toString(array[i]);
+            tA[i] = Integer.toString(array[i]);
         }
         var secretMember = RendomInteger.get(min, countOfNumbers);
-        textArray[secretMember] = "...";
-        System.out.println(Arrays.toString(textArray));
+        tA[secretMember] = "..";
+        System.out.println(tA[0] + " " + tA[1] + " " + tA[2] + " " + tA[3] + " " + tA[4] + " " + tA[5] + " " + tA[6]);
         return array[secretMember];
     }
     public final String rightAnsver(int number) {
