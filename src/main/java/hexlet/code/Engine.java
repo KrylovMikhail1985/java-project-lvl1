@@ -15,9 +15,9 @@ public class Engine {
         System.out.println(name.textQuestion());
         for (var i = 0; i < numberOfIterations; i++) {
             rightAnsver = name.rightAnsver(name.question());
+            System.out.print("Your answer: ");
             var ansvers = new Scanner(System.in);
             var ansver = ansvers.nextLine();
-            System.out.println("Your answer: " + ansver);
             if (ansver.equals(rightAnsver)) {
                 System.out.println("Correct!");
                 continue;

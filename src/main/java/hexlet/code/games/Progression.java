@@ -18,13 +18,18 @@ public class Progression implements Games {
         for (var i = 1; i < array.length; i++) {
             array[i] = array[i - 1] + plusNumber;
         }
-        var tA = new String[countOfNumbers];
+        var textAnsver = new String[countOfNumbers];
         for (var i = 0; i < array.length; i++) {
-            tA[i] = Integer.toString(array[i]);
+            textAnsver[i] = Integer.toString(array[i]);
         }
         var secretMember = RendomInteger.get(min, countOfNumbers);
-        tA[secretMember] = "..";
-        System.out.println(tA[0] + " " + tA[1] + " " + tA[2] + " " + tA[3] + " " + tA[4] + " " + tA[5] + " " + tA[6]);
+        textAnsver[secretMember] = "..";
+
+        System.out.print("Question: ");
+        for (var count: textAnsver) {
+            System.out.print(count + " ");
+        }
+        System.out.println();
         return array[secretMember];
     }
     public final String rightAnsver(int number) {
