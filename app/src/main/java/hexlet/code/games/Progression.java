@@ -4,10 +4,12 @@ import java.util.Arrays;
 
 import hexlet.code.Engine;
 import hexlet.code.RendomInteger;
-import hexlet.code.cli.Cli;
 
-public class Progression {
-    public static int question() {
+public class Progression implements Games {
+    public final String textQuestion() {
+        return "What number is missing in the progression?";
+    }
+    public final int question() {
         final int min = 1;
         final int max = 10;
         var number = RendomInteger.get(min, max);
@@ -27,16 +29,12 @@ public class Progression {
         System.out.println(Arrays.toString(textArray));
         return array[secretMember];
     }
-    public static String rightAnsver(int number) {
+    public final String rightAnsver(int number) {
         return Integer.toString(number);
     }
     public static void game() {
-        var name = Cli.greeting();
-        System.out.println("What number is missing in the progression?");
-        if (Engine.ansverIsCorrect("Progression")) {
-            System.out.println("Congratulations, " + name + "!");
-        } else {
-            System.out.println("Let's try again, " + name + "!");
-        }
+        Games game;
+        game = new Progression();
+        Engine.ansverIsCorrect(game);
     }
 }

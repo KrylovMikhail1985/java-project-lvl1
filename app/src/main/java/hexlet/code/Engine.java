@@ -2,31 +2,19 @@ package hexlet.code;
 
 import java.util.Scanner;
 
-import hexlet.code.games.Calc;
-import hexlet.code.games.Even;
-import hexlet.code.games.Gcd;
-import hexlet.code.games.Prime;
-import hexlet.code.games.Progression;
+import hexlet.code.cli.Cli;
+import hexlet.code.games.Games;
+
 
 public class Engine {
-    public static boolean ansverIsCorrect(String gameName) {
+    public static void ansverIsCorrect(Games name) {
+        var userName = Cli.greeting();
         var allAnsversIsCorrect = true;
         final int numberOfIterations = 3;
         var rightAnsver = "rightAnsver";
+        System.out.println(name.textQuestion());
         for (var i = 0; i < numberOfIterations; i++) {
-            if (gameName.equals("Even")) {
-                rightAnsver = Even.rightAnsver(Even.question());
-            } else if (gameName.equals("Calc")) {
-                rightAnsver = Calc.rightAnsver(Calc.question());
-            } else if (gameName.equals("GCD")) {
-                rightAnsver = Gcd.rightAnsver(Gcd.question());
-            } else if (gameName.equals("Progression")) {
-                rightAnsver = Progression.rightAnsver(Progression.question());
-            } else if (gameName.equals("Prime")) {
-                rightAnsver = Prime.rightAnsver(Prime.question());
-            } else {
-                System.out.println("goodbye!");
-            }
+            rightAnsver = name.rightAnsver(name.question());
             var ansvers = new Scanner(System.in);
             var ansver = ansvers.nextLine();
             System.out.println("Your answer: " + ansver);
@@ -38,6 +26,10 @@ public class Engine {
             allAnsversIsCorrect = false;
             break;
         }
-        return allAnsversIsCorrect;
+        if (allAnsversIsCorrect) {
+            System.out.println("Congratulations, " + userName + "!");
+        } else {
+            System.out.println("Let's try again, " + userName + "!");
+        }
     }
 }
