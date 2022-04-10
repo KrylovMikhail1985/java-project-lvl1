@@ -14,15 +14,19 @@ public class Gcd implements Games {
         var secondNumber = RendomInteger.get(min, max);
         System.out.println("Question: " + firstNumber + " " + secondNumber);
         var ansver = 1;
+        var minimum = 0;
+        var maxumum = 0;
         if (firstNumber < secondNumber) {
-            for (var i = firstNumber; i > 0; i--) {
-                if (secondNumber % i == 0 && firstNumber % i == 0) {
-                    ansver = i;
-                    break;
-                } else if (secondNumber % i == 0 && firstNumber % i == 0) {
-                    ansver = i;
-                    break;
-                }
+            minimum = firstNumber;
+            maxumum = secondNumber;
+        } else {
+            minimum = secondNumber;
+            maxumum = firstNumber;
+        }
+        for (var i = minimum; i > 0; i--) {
+            if (maxumum % i == 0 && minimum % i == 0) {
+                ansver = i;
+                break;
             }
         }
         return ansver;
